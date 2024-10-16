@@ -1,0 +1,28 @@
+<div class="availability-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha de llegada</mat-label>
+      <input matInput [matDatepicker]="picker1" [(ngModel)]="checkInDate" placeholder="Selecciona la fecha de llegada">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha de salida</mat-label>
+      <input matInput [matDatepicker]="checkOutPicker" [(ngModel)]="checkOutDate" placeholder="Selecciona la fecha de salida">
+      <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
+      <mat-datepicker #checkOutPicker></mat-datepicker>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="checkAvailability()">Ver Disponibilidad</button>
+  </div>
+  
+  <div class="room-list">
+    <mat-card *ngFor="let room of availableRooms" class="room-card">
+      <mat-card-title>{{ room.number }} - {{ room.type }}</mat-card-title>
+      <mat-card-content>
+        <p>Estado: {{ room.state }}</p>
+        <p>Precio: {{ room.price }}</p>
+      </mat-card-content>
+      <button mat-raised-button color="primary" (click)="onReserve(room.id)">Reservar</button>
+    </mat-card>
+  </div>

@@ -1,0 +1,48 @@
+/* Add application styles & imports to this file! */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Contenedor para la sección de fechas y el botón */
+.availability-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Separación entre los elementos */
+  margin-bottom: 40px; /* Separación con la lista de habitaciones */
+  justify-content: space-between; /* Distribuir los elementos de manera uniforme */
+  max-width: 800px; /* Ajustar el ancho máximo para que se vea más compacto */
+  margin: auto; /* Centrar el contenedor horizontalmente */
+}
+
+/* Contenedor para la lista de habitaciones */
+.room-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas de habitaciones */
+  justify-content: space-around; /* Distribuir las tarjetas */
+  margin-top: 20px;
+}
+
+/* Estilos para cada tarjeta de habitación */
+.room-card {
+  width: 250px; /* Ajustar el ancho de las tarjetas */
+  margin-bottom: 20px; /* Espacio entre las filas de habitaciones */
+}
+
+/* Ajustes para los campos de formulario */
+mat-form-field {
+  width: 250px; /* Ancho más grande para los selectores de fecha */
+}
+
+/* Botón de ver disponibilidad */
+button {
+  margin-left: 10px;
+}
+
+mat-datepicker-content {
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}

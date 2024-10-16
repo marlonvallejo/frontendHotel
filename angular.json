@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,6 +88,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "hotel-andino-frontend"
+  "defaultProject": "hotel-andino-frontend",
+  "cli": {
+    "analytics": "2a576922-b52f-4f2f-9713-c4e7d96d185f"
+  }
 }
